@@ -3,7 +3,7 @@
 from collections import defaultdict
 
 # Has a time complexity of O(N), ideal for small data sets, but space complexity is of O(26). As 26 references are made from hashmap.
-def anagram_chcek(s1, s2):
+def anagram_check(s1, s2):
 
 	# Sets the default value of all keys to zero
 	ana_li = defaultdict(default_value)
@@ -38,7 +38,7 @@ def default_value():
 	return 0
 
 # Has a time complexity of O(log n) since we use pythons built in timsort to arrange letters
-def anagram_chcek_sorted(s1, s2):
+def anagram_check_sorted(s1, s2):
 
 	# Removes spaces in both strings
 	s1 = s1.replace(" ", "").lower()
@@ -53,7 +53,7 @@ def anagram_chcek_sorted(s1, s2):
 if __name__ == '__main__':
 	s1 = "tram"
 	s2 = "mart"
-	if anagram_chcek(s1, s2):
+	if anagram_check(s1, s2):
 		print("{} and {} are anagrams!".format(s1, s2))
 	else:
 		print("{} and {} are not anagrams!".format(s1, s2))
