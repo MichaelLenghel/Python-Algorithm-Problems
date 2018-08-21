@@ -2,10 +2,8 @@
 # Second one has its elements shuffeled and one removed.
 # Find which element is missing as efficiently as possible.
 
-# Used hash map to achieve O(N) complexity, alternatively could have sorted and used binary search to achieve O(N log N) complexity
-
 from random import sample
-
+# Used hash map to achieve O(N) complexity,
 def finder(li_full, li_missing):
 	count = {}
 	# Assign each value from li_missing as a key to the list
@@ -29,7 +27,8 @@ def finder(li_full, li_missing):
 	return missing_ele
 
 # Alternative algorithm
-# O(N log N) so not as good as the algorithm above
+# Sorted using timsort.
+# O(N log N) in worse case so not as good as the algorithm above
 def finder_using_sort(arr1, arr2):
 
 	arr1.sort()
@@ -43,7 +42,7 @@ def finder_using_sort(arr1, arr2):
 	# Otherwise return last element
 	return arr[-1]
 
-# We can also use XOR between the numbers in the array
+# We can also use XOR between the numbers in the array, achieving O(N) for both time and space complexity
 def finder_XOR(arr1, arr2):
 	result = 0
 
@@ -51,7 +50,7 @@ def finder_XOR(arr1, arr2):
 	# arr1+arr2 concats the arrays
 	for num in arr1+arr2:
 		result^=num
-		print(result)
+		print("result: ", result)
 	return result
 
 
