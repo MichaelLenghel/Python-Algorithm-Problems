@@ -2,12 +2,7 @@
 
 def rev_word(s):
 	s = s.split()
-	s_new = list()
-	
-	for x in reversed(s):
-		s_new.append(x)
-	s = ' '.join(s_new)
-	return s
+	return ' '.join(reversed(s))
 
 def rev_word_2(s):
 	words = []
@@ -28,6 +23,7 @@ def rev_word_2(s):
 
 	return " ".join(reversed(words))
 
+# Alternative reverse method for fun:
 # def reverse_words(words):
 # 	print("list ", words)
 # 	len_list = len(words) - 1
@@ -41,6 +37,6 @@ def rev_word_2(s):
 
 if __name__ == '__main__':
 	sen = "       This is a sentence to           be reversed         "
-	rev_sen = rev_word_2(sen)
+	rev_sen = rev_word(sen)
 	print("Normal sentence: ", sen)
 	print("Reversed sentence: ", rev_sen)
