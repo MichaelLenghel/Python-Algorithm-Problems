@@ -1,3 +1,4 @@
+# Problem: Find if a string is wholly comprised of unique characters
 import collections
 
 def uni_chars(s):
@@ -23,10 +24,11 @@ def uni_chars_3(s):
 	chars = set()
 
 	for letter in chars:
-		if let in chars:
+		if letter in chars:
 			return False
 		else:
-			char.add(let)
+			char.add(letter)
+	return True
 
 if __name__ == '__main__':
 	normal_str = 'abcdefgf'

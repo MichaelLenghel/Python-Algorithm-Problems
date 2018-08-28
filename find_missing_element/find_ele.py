@@ -3,28 +3,22 @@
 # Find which element is missing as efficiently as possible.
 
 from random import sample
+import collections
 # Used hash map to achieve O(N) complexity,
 def finder(li_full, li_missing):
-	count = {}
+	count = collections.defaultdict(int)
 	# Assign each value from li_missing as a key to the list
 	for num in li_missing:
-		# Need to say this, as we don't know if this has been previously set to 1. Can use count = collections.defaultdict(int) to get around this.
-		if num not in count:
-			count[num] = 1
-		else:
-			count[num] += 1
+		count[num] += 1
 
 	# Now we decrement each time li_missing is incurred, leaving only one value, that is the value that li is missing
 	for num in li_full:
-		if num not in count:
-			return num
-		else:
-			count[num] -= 1
+		count[num] -= 1
 
-	# Account for duplicate value being taken out. If value is less than 0, than decremented twice:
+	# Account for a duplicate being missing. Found if something decremented twice in li_full loop:
 	missing_ele = [num for num in count if count[num] < 0]
-	missing_ele = missing_ele[0]
-	return missing_ele
+	return missing_ele[0]
+
 
 # Alternative algorithm
 # Sorted using timsort.

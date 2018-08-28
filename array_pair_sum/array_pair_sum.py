@@ -1,4 +1,5 @@
 """ 
+	Problem: Given an array, output all the unique pairs that sum to a specific value of k
   A less pythonic approach would be to sort all the elements and start with two indexses at opposite sides/
   If combined value is too little, increment from left, if combined value is too large, increment from the right.
   Complexity of this is O(n log n) if we sort with an efficient algorithm such as merge sort.

@@ -47,10 +47,22 @@ def anagram_check_sorted(s1, s2):
 
 	return sorted(s1) == sorted(s2)
 
+def anagram_check_exor(s1, s2):
+	result = 0
+
+	for letter in s1 + s2:
+		result ^= ord(letter)
+
+	if result == 0:
+		return True
+	else:
+		return False
+
+
 if __name__ == '__main__':
 	s1 = "tram"
 	s2 = "mart"
-	if anagram_check(s1, s2):
+	if anagram_check_exor(s1, s2):
 		print("{} and {} are anagrams!".format(s1, s2))
 	else:
 		print("{} and {} are not anagrams!".format(s1, s2))
