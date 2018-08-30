@@ -22,7 +22,9 @@ def word_split(phrase, list_of_words, output = None):
 
 	# If a word is findable, add it to the list and remove it from the phrase using the length of the word
 	for word in list_of_words:
-		if phrase.startswith(word):
+		# if word startswith(phrase)
+		# if word == phrase[:len(word)]:
+		if word in phrase:
 			output.append(word)
 			# Remove word from phrase
 			phrase = phrase.replace(word, "")
@@ -32,5 +34,4 @@ def word_split(phrase, list_of_words, output = None):
 	return output		
 
 
-new_li = word_split('themanran',['the','ran','man'])
-print(new_li)
+print(word_split('themanran',['the','ran','man']))
