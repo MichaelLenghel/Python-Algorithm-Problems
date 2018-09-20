@@ -1,0 +1,20 @@
+1 X=0
+2 IF X = 42 GOTO 5
+3 X += 1
+4 GOTO 2
+5 PRINT "X is finally 42!"
+6 X=0
+7 IF X = 42 GOTO 5
+8 X += 1
+9 GOTO 2
+10 PRINT "X is finally 42!"
+11 X=0
+12 IF X = 42 GOTO 5
+13 X += 1
+14 GOTO 2
+15 PRINT "X is finally 42!"
+16 X=0
+17 IF X = 42 GOTO 5
+18 X += 1
+19 GOTO 2
+20 PRINT "X is finally 42!"
