@@ -1,2 +1,2 @@
 # python_practice_problems
-A number of problems answered in python relating to data structures and algorithms
+Solving problems in python focusing on the implementation of data structures, algorithms and pythonic syntax.
